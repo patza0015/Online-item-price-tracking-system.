@@ -1,0 +1,14 @@
+{
+    "name": "e2test",
+    "version": "1.0.0",
+    "main": "main.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "csv-writer": "^1.6.0",
+        "electron": "^13.1.9",
+        "puppeteer": "^10.2.0"
+    }
+}
