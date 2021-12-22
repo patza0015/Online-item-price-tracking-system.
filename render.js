@@ -1,10 +1,12 @@
 const ipcRenderer = require("electron").ipcRenderer;
 
 //ค้นหา keywordที่เป็นส่วนของ button
-const generatePassword = () => {
+const select = () => {
     ipcRenderer.send(
-        "generatePassword",
-        document.querySelector('.keyWord').value
+        "select",
+        document.querySelector('.keyWord').value,
+        document.querySelector('.filename').value
+
     );
 };
 
@@ -13,6 +15,21 @@ const generatePassword = () => {
 const updataValue = () => {
     ipcRenderer.send(
         "updataValue"
+    );
+};
+
+//ค้นหา keyword ที่เป็นส่วนของ button
+const showGraph = () => {
+    ipcRenderer.send(
+        "showGraph",
+
+    );
+};
+
+const handleSubmit = () => {
+    ipcRenderer.send(
+        "handleSubmit",
+        //ไม่มีอะไรเดียวลบ
     );
 };
 
